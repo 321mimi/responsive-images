@@ -1,0 +1,53 @@
+/* 
+
+ATTRIBUTION
+
+All images used belong to:
+Markus Spiske   -   https://500px.com/markusspiske
+Yinan Chen      -   https://500px.com/webmaster85
+Fahim Akhter    -   https://500px.com/fahimakhter 
+
+*/
+
+h1 {
+    text-align: center;
+}
+picture, img {
+    max-width: 90%;
+    transition: opacity .5s ease-in, transform .5s ease-in;
+}
+picture:hover, img:hover {
+    opacity: 0.5;
+    transform: scale(1.2,1.2) rotate(360deg);
+    z-index: 20;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing:border-box;
+    padding: 0 5% 0 5%;
+}
+li {
+    list-style-type: none;
+    background: grey;
+    text-align: center;
+    /* 1. Less than 600px - one column layout */
+    width: 90%;
+    margin: 5%;
+}
+/* 2. Between 600px and 1200px - two column layout */
+@media screen and (min-width: 600px) and (max-width: 1200px){
+    li {
+        width: 40%;
+        margin: 5%;
+    }
+}
+
+/* 3. Above 1200px - four column layout */
+@media screen and (min-width: 1200px) {
+    li {
+        width: 15%;
+        margin: 5%;
+    }
+}
